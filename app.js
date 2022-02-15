@@ -1,19 +1,23 @@
-$('#btnSubmit').click(function() {
-    // alert('button clicked');
-})
+// $('#btnSubmit').click(function() {
+//     alert('button clicked');
+// })
 
 
 
 $("form").submit(function() {
-    $('#btnSubmit').prop('disabled', true);
+    $('input[id="btnSubmit"]').attr('disabled', true);
 
-    let text = $('#input').val();
-    
-    if(text !== "") {
-        $('#btnSubmit').prop('disabled', false);
+    $('input[id="input"]').keyup(function() {
+       if($(this).val() !== "") {
+        $('input[id="btnSubmit"]').attr('disabled', false);
         alert(text); 
-    }     
+        } else {
+            $('input[id="btnSubmit"]').attr('disabled', true);
+        }   
+    })
+    
 })
+
 
 $('<div class = "container"></div>').appendTo('body').insertAfter('form');
 
