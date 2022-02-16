@@ -1,10 +1,9 @@
-// $('#btnSubmit').click(function() {
-//     alert('button clicked');
-// })
+$('#btnSubmit').click(function() {
+    alert('button clicked');
+})
 
 
 
-$("form").submit(function() {
     $('input[id="btnSubmit"]').attr('disabled', true);
 
     $('input[id="input"]').keyup(function() {
@@ -16,7 +15,6 @@ $("form").submit(function() {
         }   
     })
     
-})
 
 
 $('<div class = "container"></div>').appendTo('body').insertAfter('form');
